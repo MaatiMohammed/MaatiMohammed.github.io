@@ -1,0 +1,8 @@
+# Basic site configuration
+title: "Mohammed Maati — AI Engineer & NLP Developer"
+description: "Personal portfolio showcasing my AI, NLP, and software projects."
+theme: minima  # or another Jekyll theme you prefer
+
+# Optional: social links or site metadata
+author: Mohammed Maati
+github_username: mohammed45dz
