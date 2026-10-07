@@ -1,120 +1,273 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohammed Maati – Ph.D. Student in AI & NLP Developer</title>
-  <meta name="description" content="Portfolio of Mohammed Maati, Ph.D. student in Artificial Intelligence, NLP developer, and full-stack engineer. Explore my projects, skills, and research." />
-  <link rel="icon" type="image/png" href="assest/portfolio-icon.ico" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  
-</head>
-<body>
-  <header>
-    <div class="profile-container">
-      <img src="assest/portrait.jpg" alt="Portrait of Mohammed Maati" class="profile-pic">
-      <div>
-        <h1>Mohammed Maati</h1>
-        <p>Ph.D. Student in AI | NLP Developer | Full-Stack Engineer</p>
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8fafc">
+    <meta name="description" content="Mohammed Maati is a PhD student in Artificial Intelligence working on Arabic NLP, dialect identification and deep learning, alongside full-stack software engineering.">
+    <meta name="author" content="Mohammed Maati">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://maatimohammed.github.io/">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mohammed Maati — AI/NLP Research & Engineering">
+    <meta property="og:description" content="Arabic NLP research, dialect identification and practical software engineering.">
+    <meta property="og:url" content="https://maatimohammed.github.io/">
+    <meta property="og:image" content="https://maatimohammed.github.io/assets/portrait.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Mohammed Maati — AI/NLP Research & Engineering">
+    <meta name="twitter:description" content="Arabic NLP research, dialect identification and practical software engineering.">
+    <title>Mohammed Maati — AI/NLP Research & Engineering</title>
+    <script>
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      const activeTheme = savedTheme === "dark" || savedTheme === "light" ? savedTheme : systemTheme;
+      document.documentElement.dataset.theme = activeTheme;
+      document.querySelector('meta[name="theme-color"]').content = activeTheme === "dark" ? "#0f172a" : "#f8fafc";
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://maatimohammed.github.io/#person",
+            "name": "Mohammed Maati",
+            "url": "https://maatimohammed.github.io/",
+            "image": "https://maatimohammed.github.io/assets/portrait.jpg",
+            "email": "mailto:mohammed.maati74@gmail.com",
+            "jobTitle": "PhD Student in Artificial Intelligence",
+            "affiliation": {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Naama"
+            },
+            "address": {
+              "@type": "Country",
+              "name": "Algeria"
+            },
+            "sameAs": [
+              "https://github.com/MaatiMohammed",
+              "https://www.linkedin.com/in/maatimohammed",
+              "https://www.researchgate.net/profile/Mohammed-Maati",
+              "https://orcid.org/0009-0009-6125-1261"
+            ],
+            "knowsAbout": [
+              "Artificial Intelligence",
+              "Natural Language Processing",
+              "Arabic NLP",
+              "Arabic Dialect Identification",
+              "Deep Learning",
+              "Transformer Models"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://maatimohammed.github.io/#website",
+            "name": "Mohammed Maati — AI/NLP Research & Engineering",
+            "url": "https://maatimohammed.github.io/",
+            "description": "Arabic NLP research, dialect identification and practical software engineering.",
+            "publisher": { "@id": "https://maatimohammed.github.io/#person" }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Mohammed Maati, home">
+        <span class="brand-mark" aria-hidden="true">MM</span>
+        <span class="brand-name">Mohammed Maati</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.2A8.4 8.4 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"></path></svg>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="hero-identity">
+            <p class="eyebrow"><span class="status-dot"></span> Research · Engineering · Algeria</p>
+            <h1 id="hero-title">Mohammed<br><span>Maati</span></h1>
+          </div>
+          <p class="hero-role">PhD Student in Artificial Intelligence<br><span>AI/NLP Engineer · Full-Stack Developer</span></p>
+          <p class="hero-summary">Exploring Arabic language technologies, dialect identification and transformer-based NLP — while building practical software systems.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore selected work <span aria-hidden="true">↘</span></a>
+            <a class="button button-quiet" href="https://orcid.org/0009-0009-6125-1261" target="_blank" rel="noopener noreferrer">Research profile <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-topics" aria-label="Research and engineering areas">
+            <span>Arabic NLP</span><span>Deep Learning</span><span>Software Engineering</span>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="./assets/portrait.jpg" alt="Mohammed Maati at an academic event" width="320" height="320" fetchpriority="high">
+          <figcaption>
+            <span class="hero-photo-status"><span class="status-dot"></span> Based in Algeria</span>
+            <span class="hero-photo-caption">AI research <span aria-hidden="true">·</span> language technology <span aria-hidden="true">·</span> software</span>
+          </figcaption>
+        </figure>
+        <a class="scroll-cue" href="#about"><span class="scroll-line"></span> Scroll to explore</a>
+      </section>
+
+      <section class="section section-tinted" id="about" aria-labelledby="about-title">
+        <div class="section-shell about-layout">
+          <div class="section-intro reveal">
+            <p class="eyebrow">01 / Profile</p>
+            <h2 id="about-title">Research with a<br><span class="accent-text">builder’s perspective.</span></h2>
+            <p class="section-lead">My work sits at the intersection of Arabic NLP research and practical software engineering.</p>
+          </div>
+          <div class="about-content reveal">
+            <p>I am a PhD student in Artificial Intelligence at the University of Naama / University Centre Salhi Ahmed of Naama. My doctoral research investigates Arabic dialect identification in social media text, with an interest in deep learning, transformer models and the challenges of dialectal variation.</p>
+            <p>Alongside research experimentation, I build data-driven applications and full-stack systems. My academic work also includes teaching computer science, preparing practical sessions and supporting students in laboratory settings.</p>
+            <div class="profile-strip">
+              <div><span class="mono-label">CURRENT POSITION</span><strong>PhD Student in Artificial Intelligence</strong><span>University of Naama · Algeria</span></div>
+              <a class="text-link" href="https://www.linkedin.com/in/maatimohammed" target="_blank" rel="noopener noreferrer">Connect <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">02 / Questions & methods</p><h2 id="research-title">Research focus</h2></div>
+            <p>Studying how language models represent and classify Arabic varieties in real-world text.</p>
+          </div>
+          <div class="research-grid">
+            <article class="research-item reveal"><span class="research-number">01</span><h3>Arabic Dialect Identification</h3><p>Identifying and analyzing regional Arabic varieties in social media text.</p><span class="research-mark" aria-hidden="true">لهجة</span></article>
+            <article class="research-item reveal"><span class="research-number">02</span><h3>Arabic NLP</h3><p>Text preprocessing, representation and classification for Arabic language technologies.</p><span class="research-mark" aria-hidden="true">عربي</span></article>
+            <article class="research-item reveal"><span class="research-number">03</span><h3>Transformer Models</h3><p>Fine-tuning and evaluating pretrained language models for Arabic NLP tasks.</p><span class="research-mark" aria-hidden="true">[CLS]</span></article>
+            <article class="research-item reveal"><span class="research-number">04</span><h3>Social Media NLP</h3><p>Working with noisy, informal and user-generated dialectal text.</p><span class="research-mark" aria-hidden="true">#text</span></article>
+            <article class="research-item reveal"><span class="research-number">05</span><h3>Deep Learning</h3><p>Controlled experimentation with transformer architectures and neural NLP models.</p><span class="research-mark" aria-hidden="true">model()</span></article>
+            <article class="research-item reveal"><span class="research-number">06</span><h3>Dialect Generalization</h3><p>Examining model behavior across Arabic dialects and country-level labels.</p><span class="research-mark" aria-hidden="true">↔</span></article>
+          </div>
+          <article class="thesis-panel reveal">
+            <div class="thesis-label"><span class="thesis-symbol" aria-hidden="true">R</span><div><span class="mono-label">DOCTORAL RESEARCH</span><span>2024 — Present</span></div></div>
+            <div class="thesis-main"><h3>Exploring Arabic Dialects on Social Media Using Deep Learning</h3><p>Arabic dialect identification · noisy user-generated text · normalization · transformer models · evaluation · cross-dialect generalization</p></div>
+            <span class="thesis-side-label">PhD Thesis</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="projects" aria-labelledby="projects-title">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">03 / Selected work</p><h2 id="projects-title">Research meets engineering</h2></div>
+            <p>A selection of research experiments, academic tools and software products.</p>
+          </div>
+          <div class="filter-row reveal" id="project-filters" aria-label="Filter projects"></div>
+          <div class="projects-grid" id="project-list" aria-live="polite"></div>
+          <p class="archive-note">Earlier work is kept in context—not hidden, but no longer the headline.</p>
+        </div>
+      </section>
+
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">04 / Scholarly work</p><h2 id="publications-title">Research & publications</h2></div>
+            <a class="text-link" href="https://www.researchgate.net/profile/Mohammed-Maati" target="_blank" rel="noopener noreferrer">ResearchGate profile <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="publication-note">Titles below are listed on my ResearchGate profile. Venue, authorship and publication status are not shown here where they could not be independently confirmed.</p>
+          <div class="filter-row publication-filters reveal" id="publication-filters" aria-label="Filter research listings"></div>
+          <div class="publication-list" id="publication-list" aria-live="polite"></div>
+          <div class="conference-row reveal"><span class="mono-label">CONFERENCE WORK</span><span>IEEE EDiS 2026</span><span>NCIIT'26</span><small>Titles and publication details not provided.</small></div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="experience" aria-labelledby="experience-title">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">05 / Academic path</p><h2 id="experience-title">Experience & education</h2></div>
+            <p>Teaching, research and technical foundations.</p>
+          </div>
+          <div class="experience-layout">
+            <div class="experience-list">
+              <h3 class="subsection-title">Experience</h3>
+              <article class="timeline-entry reveal"><span class="timeline-point"></span><div class="timeline-meta"><span>2024 — Present</span><span>University of Naama</span></div><h4>Contractual Lecturer</h4><p>Computer science teaching, lecture preparation, practical sessions, laboratory activities and student assessment.</p></article>
+              <article class="timeline-entry reveal"><span class="timeline-point"></span><div class="timeline-meta"><span>2024 — Present</span><span>PhD Thesis</span></div><h4>AI/NLP Research</h4><p>Arabic dialect identification, preprocessing and normalization, transformer fine-tuning, model evaluation and experimental design.</p></article>
+              <article class="timeline-entry timeline-secondary reveal"><span class="timeline-point"></span><div class="timeline-meta"><span>2024 · 2 weeks</span><span>Naama</span></div><h4>IT Intern · Sonelgaz</h4><p>Exposure to information systems, databases and network infrastructure.</p></article>
+            </div>
+            <div class="education-list">
+              <h3 class="subsection-title">Education</h3>
+              <article class="education-entry reveal"><span class="education-year">2024 — Present</span><h4>PhD Student in Artificial Intelligence</h4><p>University of Naama</p></article>
+              <article class="education-entry reveal"><span class="education-year">2024</span><h4>Master’s Degree in Information Systems</h4><p>University of Naama</p></article>
+              <article class="education-entry reveal"><span class="education-year">2022</span><h4>Bachelor’s Degree in Computer Systems</h4><p>University of Naama</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <div><p class="eyebrow">06 / Technical practice</p><h2 id="skills-title">Tools & technologies</h2></div>
+            <p>Technologies used across research experiments and application development.</p>
+          </div>
+          <div class="skills-grid" id="skills-list"></div>
+          <div class="credentials reveal">
+            <div class="credential-group"><h3>Programs & learning</h3><ul><li><span>Huawei Seeds for the Future</span><time>2024</time></li><li><span>Supervised Machine Learning: Regression and Classification</span><small>DeepLearning.AI / Stanford Online</small></li><li><span>English Language Certificate</span><small>B2</small></li></ul></div>
+            <div class="credential-group"><h3>Languages</h3><ul><li><span>Arabic</span><small>Native</small></li><li><span>English</span><small>B2</small></li><li><span>French</span><small>Intermediate</small></li></ul></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="github-band" aria-labelledby="github-title">
+        <div class="section-shell github-band-inner reveal">
+          <div><p class="eyebrow">Open source & experiments</p><h2 id="github-title">Follow the work as it evolves.</h2><p>Repositories, research code and software projects are collected on GitHub.</p></div>
+          <a class="button button-light" href="https://github.com/MaatiMohammed" target="_blank" rel="noopener noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-shell contact-layout">
+          <div class="contact-copy reveal"><p class="eyebrow">07 / Get in touch</p><h2 id="contact-title">Let’s build<br><span class="accent-text">something meaningful.</span></h2><p>For research collaboration, AI/NLP projects, academic opportunities or software engineering work, reach out directly.</p><a class="button button-primary" href="mailto:mohammed.maati74@gmail.com">Email Mohammed <span aria-hidden="true">↗</span></a></div>
+          <div class="contact-links reveal">
+            <div class="contact-link contact-email"><span><small>PROFESSIONAL EMAIL</small><strong><a href="mailto:mohammed.maati74@gmail.com">mohammed.maati74@gmail.com</a></strong></span><button class="copy-email" type="button" data-copy-email="mohammed.maati74@gmail.com">Copy</button><span class="copy-status" aria-live="polite"></span></div>
+            <a class="contact-link" href="mailto:maati.mohammed@cuniv-naama.dz"><span><small>ACADEMIC EMAIL</small><strong>maati.mohammed@cuniv-naama.dz</strong></span><span aria-hidden="true">↗</span></a>
+            <a class="contact-link" href="tel:+213698376975"><span><small>PHONE</small><strong>+213 698 376 975</strong></span><span aria-hidden="true">↗</span></a>
+            <div class="social-links" aria-label="Professional profiles">
+              <a href="https://github.com/MaatiMohammed" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://www.linkedin.com/in/maatimohammed" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+              <a href="https://www.researchgate.net/profile/Mohammed-Maati" target="_blank" rel="noopener noreferrer">ResearchGate <span aria-hidden="true">↗</span></a>
+              <a href="https://orcid.org/0009-0009-6125-1261" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">MM</span><span><strong>Mohammed Maati</strong><small>PhD Student in Artificial Intelligence</small></span></a>
+        <p>AI/NLP Research · Arabic Language Technologies · Full-Stack Engineering</p>
+        <span class="footer-copyright">© 2026 Mohammed Maati</span>
       </div>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    </footer>
 
-  <section id="about" class="alt-bg">
-    <h2>About Me</h2>
-    <p>I’m a Ph.D. student specializing in Artificial Intelligence. My research and work focus on developing intelligent systems that bridge human language and technology, combining deep learning, NLP, and software engineering.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill"><i class="fab fa-python"></i><p>Python / TensorFlow / PyTorch</p></div>
-      <div class="skill"><i class="fas fa-language"></i><p>Natural Language Processing (NLP)</p></div>
-      <div class="skill"><i class="fas fa-brain"></i><p>Machine Learning & Deep Learning</p></div>
-      <div class="skill"><i class="fas fa-database"></i><p>SQL / MongoDB / Git</p></div>
-      <div class="skill"><i class="fa-solid fa-server"></i><p>Node.js / Flask / PHP</p></div>
-      <div class="skill"><i class="fab fa-react"></i><p>React / React Native</p></div>
-    </div>
-  </section>
-
-  <section id="projects" class="alt-bg">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <h3>AraSpotlight</h3>
-        <p>An Arabic text-analysis and commentary system inspired by DBpedia Spotlight, providing entity recognition and contextual insights.</p>
-      </div>
-      <div class="project">
-        <h3>Expense Tracker App</h3>
-        <p>A desktop app built with Tkinter for managing personal expenses efficiently.</p>
-      </div>
-      <div class="project">
-        <h3>Journalistes</h3>
-        <p>A web platform that helps journalists showcase their work among peers.</p>
-      </div>
-      <div class="project">
-        <h3>Univ-Platform</h3>
-        <p>An academic management platform enabling universities to manage students, research, and communication efficiently.</p>
-      </div>
-    </div>
-  </section>
-
-<section id="contact">
-  <h2>Contact Me</h2>
-
-  <p>
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:mohammed.maati74@gmail.com">mohammed.maati74@gmail.com</a>
-  </p>
-
-  <p>
-    <i class="fas fa-phone"></i>
-    <a href="tel:+213698376975">+213 698 376 975</a>
-  </p>
-
-  <p>
-    <i class="fab fa-linkedin"></i>
-    <a href="https://linkedin.com/in/maatimohammed" target="_blank" rel="noopener noreferrer">
-      linkedin.com/in/maatimohammed
-    </a>
-  </p>
-
-  <p>
-    <i class="fab fa-github"></i>
-    <a href="https://github.com/MaatiMohammed" target="_blank" rel="noopener noreferrer">
-      github.com/MaatiMohammed
-    </a>
-  </p>
-
-  <p>
-    <i class="fab fa-researchgate"></i>
-    <a href="https://www.researchgate.net/profile/Mohammed-Maati" target="_blank" rel="noopener noreferrer">
-      researchgate.net/profile/Mohammed-Maati
-    </a>
-  </p>
-</section>
-
-<footer>
-  <p>© 2026 Mohammed Maati – All rights reserved.</p>
-</footer>
-
-  <script>
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-</body>
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-header"><span class="mono-label">PROJECT NOTE</span><button class="dialog-close" type="button" aria-label="Close project details">×</button></div>
+      <div class="dialog-content" id="dialog-content"></div>
+    </dialog>
+    <script src="./app.js" defer></script>
+  </body>
 </html>
